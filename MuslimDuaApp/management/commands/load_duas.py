@@ -15,7 +15,7 @@ class Command(BaseCommand):
             self.stdout.write(self.style.ERROR('File not found at: ' + file_path))
             return
 
-        with open(file_path, 'r', encoding='utf-8') as f:
+        with open(file_path, 'r', encoding='utf-8-sig') as f:
             data = json.load(f)
 
         # The JSON root key is "English" based on your file
